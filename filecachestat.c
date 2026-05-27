@@ -10,8 +10,6 @@
 #include<math.h>
 #include<sys/syscall.h>
 
-#define __u64 uint64_t
-
 int cachestat(unsigned int fd, struct cachestat_range *cstat_range,
     struct cachestat *cstat, unsigned int flags) {
   return syscall(SYS_cachestat, fd, cstat_range, cstat, flags);
