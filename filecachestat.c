@@ -42,7 +42,7 @@ void show_cachestat(const char* filename) {
   ret = cachestat(fd, &range, &st, 0);
   if(ret == 0) {
     printf(
-      "%s cached %lld (%.1f%%) dirty %lld writeback %lld evicted %lld ecently_evicted %lld\n",
+      "%s cached %lld (%.1f%%) dirty %lld writeback %lld evicted %lld recently_evicted %lld\n",
       filename,
       st.nr_cache, (double)st.nr_cache / (double)pages * 100.0,
       st.nr_dirty,
