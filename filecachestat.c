@@ -53,6 +53,7 @@ void show_cachestat(const char* filename) {
   } else {
     fprintf(stderr, "ERROR cachestat %s: %s\n", filename, strerror(errno));
   }
+  close(fd);
 }
 
 int main(int argc, char **argv){
